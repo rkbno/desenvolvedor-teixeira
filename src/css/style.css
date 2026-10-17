@@ -115,20 +115,47 @@ h1, h2, h3 { font-family: var(--titulo); line-height: 1.1; }
 
 /* Botão flutuante com pulso sutil */
 .whats-flutuante {
-  position: fixed; z-index: 20;
-  right: 1rem; bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
-  padding: 0.85rem 1.3rem; border-radius: 999px;
-  background: #086b4a; color: #ffffff; font-weight: 500; text-decoration: none;
+  position: fixed; 
+  z-index: 20;
+  right: 1rem; 
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  padding: 0.85rem 1.3rem; 
+  border-radius: 999px;
+  background: #086b4a; 
+  color: #ffffff; 
+  font-weight: 500; 
+  text-decoration: none;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
   animation: pulso 2.6s ease-out infinite;
+  will-change: transform; /* Otimiza a renderização na placa gráfica */
 }
-.whats-flutuante:hover { background: var(--tinta); border-color: var(--tinta); color: var(--fundo); }
+
+.whats-flutuante:hover { 
+  background: var(--tinta); 
+  border-color: var(--tinta); 
+  color: var(--fundo); 
+}
+
 @keyframes pulso {
-  0% { box-shadow: 0 4px 14px rgba(0,0,0,0.25), 0 0 0 0 rgba(18,140,74,0.55); }
-  70% { box-shadow: 0 4px 14px rgba(0,0,0,0.25), 0 0 0 14px rgba(18,140,74,0); }
-  100% { box-shadow: 0 4px 14px rgba(0,0,0,0.25), 0 0 0 0 rgba(18,140,74,0); }
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), 0 0 0 0 rgba(18, 140, 74, 0.55);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3), 0 0 0 10px rgba(18, 140, 74, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), 0 0 0 0 rgba(18, 140, 74, 0);
+  }
 }
-@media (prefers-reduced-motion: reduce) { .whats-flutuante { animation: none; } }
+
+@media (prefers-reduced-motion: reduce) { 
+  .whats-flutuante { 
+    animation: none; 
+  } 
+}
 
 /* Celular */
 @media (max-width: 760px) {
