@@ -122,7 +122,7 @@ h1, h2, h3 { font-family: var(--titulo); line-height: 1.1; }
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
   animation: pulso 2.6s ease-out infinite;
 }
-.whats-flutuante:hover { background: #000302; }
+.whats-flutuante:hover { background: var(--tinta); border-color: var(--tinta); color: var(--fundo); }
 @keyframes pulso {
   0% { box-shadow: 0 4px 14px rgba(0,0,0,0.25), 0 0 0 0 rgba(18,140,74,0.55); }
   70% { box-shadow: 0 4px 14px rgba(0,0,0,0.25), 0 0 0 14px rgba(18,140,74,0); }
