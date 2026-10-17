@@ -219,3 +219,8 @@ h1, h2, h3 { font-family: var(--titulo); line-height: 1.1; }
   text-decoration: none;
 }
 
+.btn-simulado:hover {
+  background: #091e5f;
+  box-shadow: 0 4px 6px -1px rgba(29, 78, 216, 0.3); 
+}
+
