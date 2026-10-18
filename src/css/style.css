@@ -20,6 +20,10 @@ a { color: var(--destaque); }
 :focus-visible { outline: 3px solid var(--destaque); outline-offset: 3px; }
 h1, h2, h3 { font-family: var(--titulo); line-height: 1.1; }
 
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
 /* Topo */
 .topo {
   position: sticky; top: 0; z-index: 10;
